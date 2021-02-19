@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 def hello(who):
 	print("Welcome to the {}!".format(who))
 def main():
