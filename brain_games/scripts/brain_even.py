@@ -10,8 +10,15 @@ def hello(who):
     print("Welcome to the {}!".format(who))
 
 
+def winner_or_loser(q, name):
+    if q == 3:
+        return print("Congratulations, {}!".format(name))
+    else:
+        return print("You lost, {}!".format(name))
+
+
 def even_or_not(name):
-    q, e = 0, 0
+    q = 0
     counter = 3
     while counter > 0:
         print('Answer "yes" if the number is even, otherwise answer "no"')
@@ -25,12 +32,10 @@ def even_or_not(name):
             print(
                 "'yes' is wrong answer ;(. Correct answer was 'no'. "
                 "\nLet's try again, {}!".format(name))
-            e += 1
         elif number % 2 == 0 and text == 'no':
             print(
                 "'no' is wrong answer ;(. Correct answer was 'yes'."
                 "\nLet's try again, {}!".format(name))
-            e += 1
         elif number % 2 != 0 and text == 'no':
             print("Correct!")
             q += 1
@@ -38,13 +43,9 @@ def even_or_not(name):
             return print(
                 "Answer is wrong ;(. Let's try again,"
                 "{}!".format(name))
-            e += 1
         counter -= 1
 
-    if q == 3:
-        return print("Congratulations, {}!".format(name))
-    else:
-        return print("You lost, {}!".format(name))
+    winner_or_loser(q, name)
 
 
 def main():
