@@ -1,0 +1,23 @@
+import prompt
+from random import randint, choice
+from operator import add, mul, sub
+from brain_games.games import .calc
+
+
+def welcome_user(name):
+    print('Hello, {}!'.format(name))
+
+
+def hello(who):
+    print("Welcome to the {}!".format(who))
+
+
+def main():
+    hello('Brain Games')
+    name = prompt.string('May I have your name? ')
+    welcome_user(name)
+    calculate_numbers(name)
+
+
+if __name__ == "__main__":
+    main()

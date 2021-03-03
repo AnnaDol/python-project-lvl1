@@ -4,3 +4,4 @@
 [![Build Status](https://travis-ci.com/AnnaDol/python-project-lvl1.svg?branch=main)](https://travis-ci.com/AnnaDol/python-project-lvl1)
 [![asciicast](https://asciinema.org/a/GhOVsH6OrMchGDuXBc4PlNJd6.svg)](https://asciinema.org/a/GhOVsH6OrMchGDuXBc4PlNJd6)
 [![asciicast](https://asciinema.org/a/N7RJrIU4Yj30lRAdKAO9fEMlD.svg)](https://asciinema.org/a/N7RJrIU4Yj30lRAdKAO9fEMlD)
+[![asciicast](https://asciinema.org/a/spip2V6qhZYHGT2SiZI4T4pko.svg)](https://asciinema.org/a/spip2V6qhZYHGT2SiZI4T4pko)

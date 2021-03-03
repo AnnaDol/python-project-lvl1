@@ -6,12 +6,12 @@ def welcome_user(name):
     print('Hello, {}!'.format(name))
 
 
-def hello(who):
-    print("Welcome to the {}!".format(who))
+def hello():
+    print("Welcome to the Brain Games!")
 
 
 def main():
-    hello('Brain Games')
+    hello()
     name = prompt.string('May I have your name? ')
     welcome_user(name)
 

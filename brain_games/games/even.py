@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-import prompt
 from random import randint
 
 
@@ -47,14 +45,3 @@ def even_or_not(name):
         counter -= 1
 
     winner_or_loser(q, name)
-
-
-def main():
-    hello()
-    name = prompt.string('May I have your name? ')
-    welcome_user(name)
-    even_or_not(name)
-
-
-if __name__ == "__main__":
-    main()
