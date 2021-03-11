@@ -17,31 +17,18 @@ def winner_or_loser(q, name):
 
 
 def even_or_not(name):
+    print('Answer "yes" if the number is even, otherwise answer "no"')
     q = 0
     counter = 3
     while counter > 0:
-        print('Answer "yes" if the number is even, otherwise answer "no"')
         number = randint(1, 1000)
         print('Question: {}'.format(number))
         text = input("Answer: ")
-        if number % 2 == 0 and text == 'yes':
-            print("Correct!")
-            q += 1
-        elif number % 2 != 0 and text == 'yes':
-            print(
-                "'yes' is wrong answer ;(. Correct answer was 'no'. "
-                "\nLet's try again, {}!".format(name))
-        elif number % 2 == 0 and text == 'no':
-            print(
-                "'no' is wrong answer ;(. Correct answer was 'yes'."
-                "\nLet's try again, {}!".format(name))
-        elif number % 2 != 0 and text == 'no':
+        if (number % 2 == 0 and text == 'yes') \
+           or (number % 2 != 0 and text == 'no'):
             print("Correct!")
             q += 1
         else:
-            return print(
-                "Answer is wrong ;(. Let's try again,"
-                "{}!".format(name))
+            print("Answer is wrong ;(. Let's try again, {}!".format(name))
         counter -= 1
-
     winner_or_loser(q, name)

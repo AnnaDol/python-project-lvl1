@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 import prompt
 from random import randint
 
@@ -18,17 +17,20 @@ def winner_or_loser(q, name):
         return print("You lost, {}!".format(name))
 
 
-def even_or_not(name):
-    print('Answer "yes" if the number is even, otherwise answer "no"')
+def prime_or_not(name):
     q = 0
     counter = 3
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
     while counter > 0:
-        number = randint(1, 1000)
+        number = randint(1, 100)
         print('Question: {}'.format(number))
         text = input("Answer: ")
-        if (number % 2 == 0 and text == 'yes') \
-           or (number % 2 != 0 and text == 'no'):
-            print("Correct!")
+        x = 0
+        for i in range(2, number // 2 + 1):
+            if number % i == 0:
+                x += 1
+        if (x <= 0 and text == 'yes') or (x > 0 and text == 'no'):
+            print('Correct!')
             q += 1
         else:
             print("Answer is wrong ;(. Let's try again, {}!".format(name))
@@ -40,7 +42,7 @@ def main():
     hello()
     name = prompt.string('May I have your name? ')
     welcome_user(name)
-    even_or_not(name)
+    prime_or_not(name)
 
 
 if __name__ == "__main__":
