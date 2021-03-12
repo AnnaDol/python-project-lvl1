@@ -12,8 +12,6 @@ def hello():
 def winner_or_loser(q, name):
     if q == 3:
         return print("Congratulations, {}!".format(name))
-    else:
-        return print("You lost, {}!".format(name))
 
 
 def even_or_not(name):
@@ -29,6 +27,7 @@ def even_or_not(name):
             print("Correct!")
             q += 1
         else:
-            print("Answer is wrong ;(. Let's try again, {}!".format(name))
+            print("Answer is wrong ;(.\nLet's try again, {}!".format(name))
+            return
         counter -= 1
     winner_or_loser(q, name)

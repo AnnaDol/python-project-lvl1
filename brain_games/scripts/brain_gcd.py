@@ -14,8 +14,6 @@ def hello():
 def winner_or_loser(q, name):
     if q == 3:
         return print("Congratulations, {}!".format(name))
-    else:
-        return print("You lost, {}!".format(name))
 
 
 def find_gcd(name):
@@ -39,6 +37,7 @@ def find_gcd(name):
         else:
             print("{} is wrong answer ;(. Correct answer was {}. "
                   "\nLet's try again, {}!".format(text, str(gcd), name))
+            return
         counter -= 1
     winner_or_loser(q, name)
 

@@ -15,15 +15,13 @@ def hello():
 def winner_or_loser(q, name):
     if q == 3:
         return print("Congratulations, {}!".format(name))
-    else:
-        return print("You lost, {}".format(name))
 
 
 def calculate_numbers(name):
     q = 0
     counter = 3
+    print('What is the result of the expression?')
     while counter > 0:
-        print('What is the result of the expression?')
         number_one = randint(1, 100)
         number_two = randint(1, 100)
         operators = ('+', '-', '*')
@@ -42,18 +40,21 @@ def calculate_numbers(name):
                 "\nLet's try again, {}!".format(text,
                                                 str(add(number_one,
                                                         number_two)), name))
+            return
         elif operator == '-' and text != str(sub(number_one, number_two)):
             print(
                 "{} is wrong answer ;(. Correct answer was {}. "
                 "\nLet's try again, {}!".format(text,
                                                 str(sub(number_one,
                                                         number_two)), name))
+            return
         else:
             print(
                 "{} is wrong answer ;(. Correct answer was {}. "
                 "\nLet's try again, {}!".format(text,
                                                 str(mul(number_one,
                                                         number_two)), name))
+            return
         counter -= 1
     winner_or_loser(q, name)
 
