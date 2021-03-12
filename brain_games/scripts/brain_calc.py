@@ -26,7 +26,7 @@ def calculate_numbers(name):
         number_two = randint(1, 100)
         operators = ('+', '-', '*')
         operator = choice(operators)
-        print('Question: {}{}{}'.format(number_one, operator, number_two))
+        print('Question: {} {} {}'.format(number_one, operator, number_two))
         text = input("Answer: ")
         if (operator == '+' and text == str(add(number_one, number_two))) \
             or (operator == '-' and text == str(sub(number_one, number_two))) \
